@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="styles.css">
+    <title>SD Import</title>
+  </head>
+  <body>
+    <div id="title"><b>sd-import</b></div>
+    <p>Use this tool to import spiritual directors' monthly logs into Bloomerang.</p>
+    <p>It must be uploaded in a very specific format; see instructions below.</p>
+
+    <div id="flex-button-container">
+        <div class="flex-buttons">
+            <p>Select the Bloomerang Directee ID Spreadsheet</p>
+            <label for="id-input" class="file-upload">
+                Click here to choose an <code>*.xlsx</code> file
+            </label>
+            <input type="file" id="id-input" accept=".xls,.xlsx">
+            <p id="id-button-output"></p>
+        </div>
+        <div class="flex-buttons">
+            <p>Select the Spiritual Director Log</p>
+            <label for="log-input" class="file-upload" id="start-disabled-label">
+                Click here to choose an <code>*.xlsx</code> file
+            </label>
+            <input type="file" id="log-input" accept=".xls,.xlsx" disabled>
+            <p id="log-button-output"></p>
+        </div>
+    </div>
+
+
+    <!-- Output to user -->
+    <p id="output"></p>
+
+    <script src="./renderer.mjs"></script>
+  </body>
+</html>

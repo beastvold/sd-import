@@ -1,0 +1,18 @@
+{
+  "name": "sd-import",
+  "version": "1.0.0",
+  "description": "Tool for importing spiritual director logs into Bloomerang",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Eastvold",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^15.1.1"
+  },
+  "dependencies": {
+    "read-excel-file": "^5.2.13"
+  }
+}
